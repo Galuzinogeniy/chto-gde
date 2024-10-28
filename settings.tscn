@@ -1,0 +1,205 @@
+[gd_scene load_steps=4 format=3 uid="uid://clx1vfvwbfecq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo1gd"]
+bg_color = Color(0.992157, 1, 0.996078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4xnv"]
+bg_color = Color(1, 1, 1, 0.980392)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.27451, 0.27451, 0.27451, 0.133333)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpxeq"]
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel2" type="Panel" parent="."]
+offset_top = -6.0
+offset_right = 539.0
+offset_bottom = 1082.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vo1gd")
+
+[node name="Logo" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 31.0
+offset_right = 512.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0.0392157, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "ЧГ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Logo2" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 31.0
+offset_right = 312.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0.0392157, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Настройки"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NewsBlock" type="Panel" parent="Panel2"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 127.0
+offset_right = 524.0
+offset_bottom = 336.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u4xnv")
+
+[node name="Header" type="Label" parent="Panel2/NewsBlock"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 499.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Источники:
+  • Яндекс.Новости
+  • Новости Mail.ru
+  • Habr.com
+  • t.me/news_spb
+                                   ДОБАВИТЬ +"
+
+[node name="CheckBox" type="CheckBox" parent="Panel2/NewsBlock"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 51.0
+offset_right = 238.0
+offset_bottom = 75.0
+button_pressed = true
+
+[node name="CheckBox2" type="CheckBox" parent="Panel2/NewsBlock"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 81.0
+offset_right = 238.0
+offset_bottom = 105.0
+
+[node name="CheckBox3" type="CheckBox" parent="Panel2/NewsBlock"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 111.0
+offset_right = 238.0
+offset_bottom = 135.0
+button_pressed = true
+
+[node name="CheckBox4" type="CheckBox" parent="Panel2/NewsBlock"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 143.0
+offset_right = 238.0
+offset_bottom = 167.0
+button_pressed = true
+
+[node name="NewsBlock2" type="Panel" parent="Panel2"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 352.0
+offset_right = 524.0
+offset_bottom = 446.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u4xnv")
+
+[node name="Header" type="Label" parent="Panel2/NewsBlock2"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 499.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Исключить темы:
+"
+
+[node name="TextEdit" type="TextEdit" parent="Panel2/NewsBlock2"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 46.0
+offset_right = 473.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_wpxeq")
+text = " спорт, реклама"
+
+[node name="NewsBlock4" type="Panel" parent="Panel2"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 840.0
+offset_right = 524.0
+offset_bottom = 934.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u4xnv")
+
+[node name="Header" type="Label" parent="Panel2/NewsBlock4"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 499.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Отправлять уведмления о
+"
+
+[node name="TextEdit" type="TextEdit" parent="Panel2/NewsBlock4"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 46.0
+offset_right = 473.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_wpxeq")
+text = "Microsoft, Санкции, Аварии в Санкт-Петербурге"
+
+[node name="NewsBlock3" type="Panel" parent="Panel2"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 458.0
+offset_right = 523.0
+offset_bottom = 829.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u4xnv")
+
+[node name="Header" type="Label" parent="Panel2/NewsBlock3"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 499.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Стиль"
+
+[node name="TextEdit" type="TextEdit" parent="Panel2/NewsBlock3"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 46.0
+offset_right = 473.0
+offset_bottom = 328.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_wpxeq")
+text = "Краткоt тезисное описание
+Структура:
+1. Заголовок
+2. Краткое описание
+3. Подробности:
+	3.1. Положительные стороны
+	3.2. Критика
+	3.3. Мнение экспертов
+4. Проверка фактов
+5. Источники
+"

@@ -1,0 +1,220 @@
+[gd_scene load_steps=9 format=3 uid="uid://o4ili71dgshx"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_h4e3l"]
+[ext_resource type="Texture2D" uid="uid://bsiyihnhvhret" path="res://1.png" id="2_phmfd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jp5f1"]
+bg_color = Color(0.992157, 1, 0.996078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiq7h"]
+bg_color = Color(0.796243, 0.796243, 0.796243, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7myqy"]
+bg_color = Color(0.332881, 0.332881, 0.332881, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7l1c"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cuwc"]
+bg_color = Color(1, 1, 1, 0.980392)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.27451, 0.27451, 0.27451, 0.133333)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e24ow"]
+bg_color = Color(0.91664, 0.91664, 0.91664, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_h4e3l")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_top = -6.0
+offset_right = 539.0
+offset_bottom = 1153.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jp5f1")
+
+[node name="Logo" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 31.0
+offset_right = 512.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0.0392157, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "ЧГ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ModeSwitcher" type="Panel" parent="Panel2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 123.0
+offset_right = 370.0
+offset_bottom = 161.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_eiq7h")
+
+[node name="Button2" type="Button" parent="Panel2/ModeSwitcher"]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 5.0
+offset_right = 352.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.964742, 0.964742, 0.964742, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_7myqy")
+text = "Подробно"
+
+[node name="Button3" type="Button" parent="Panel2/ModeSwitcher"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 177.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_i7l1c")
+text = "Кратко"
+
+[node name="NewsBlock" type="Panel" parent="Panel2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 180.0
+offset_right = 522.0
+offset_bottom = 329.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3cuwc")
+
+[node name="Header" type="Label" parent="Panel2/NewsBlock"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 26.0
+offset_right = 499.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Apple представила новую линейку MacBook Pro
+"
+
+[node name="MainText" type="Label" parent="Panel2/NewsBlock"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 60.0
+offset_right = 387.0
+offset_bottom = 135.0
+theme_override_colors/font_color = Color(0.470076, 0.470076, 0.470076, 1)
+text = "Apple обновила линейку ноутбуков, представив MacBook Pro с процессором M3."
+autowrap_mode = 2
+
+[node name="Tag" type="Label" parent="Panel2/NewsBlock"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 7.0
+offset_right = 101.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_e24ow")
+text = "Технологии"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="Panel2/NewsBlock"]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 4.0
+offset_right = 498.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_font_sizes/font_size = 12
+text = "🕐2 часа назад"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RealButtons100percent" type="Sprite2D" parent="Panel2/NewsBlock"]
+position = Vector2(50, 126)
+scale = Vector2(0.733418, 0.77027)
+texture = ExtResource("2_phmfd")
+
+[node name="NewsBlock2" type="Panel" parent="Panel2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 348.0
+offset_right = 522.0
+offset_bottom = 497.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3cuwc")
+
+[node name="Header" type="Label" parent="Panel2/NewsBlock2"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 26.0
+offset_right = 499.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Изменения в налоговом законодательстве"
+
+[node name="MainText" type="Label" parent="Panel2/NewsBlock2"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 60.0
+offset_right = 387.0
+offset_bottom = 135.0
+theme_override_colors/font_color = Color(0.470076, 0.470076, 0.470076, 1)
+text = "Госдума приняла поправки к налоговому кодексу для малого бизнеса.
+"
+autowrap_mode = 2
+
+[node name="Tag" type="Label" parent="Panel2/NewsBlock2"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 7.0
+offset_right = 101.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_e24ow")
+text = "Экономика
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="Panel2/NewsBlock2"]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 4.0
+offset_right = 498.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_font_sizes/font_size = 12
+text = "🕐4 часа назад"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RealButtons100percent" type="Sprite2D" parent="Panel2/NewsBlock2"]
+position = Vector2(50, 126)
+scale = Vector2(0.733418, 0.77027)
+texture = ExtResource("2_phmfd")
+
+[connection signal="pressed" from="Panel2/ModeSwitcher/Button2" to="." method="_on_button_2_pressed"]
